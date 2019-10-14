@@ -1,0 +1,145 @@
+{
+    "swagger": "2.0",
+    "info":
+     {
+        "version": "1.0.0",
+        "description": "Query operations",
+        "title": "CRUD operations using ASYNC and PROMISES"
+     },
+        "host": "localhost:5000",
+        "basePath": "/",
+        "schemes": ["http"],
+    "paths": 
+    {
+        "/details": 
+         {
+            "post":
+            
+            {
+                "description": "Api of insert",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username",
+                        "id": "id",
+                        "in": "json",
+                        "example": "1"
+                    },
+                    {
+                        "type": "string",
+                        "description": "name",
+                        "name": "name",
+                        "in": "json",
+                        "example": "Yadwinder"
+                    },
+                    {
+                        "type": "string",
+                        "description": "class",
+                        "class": "class",
+                        "in": "json",
+                        "example": "10th"
+                    },
+                    {
+                        "type": "string",
+                        "description": "RollNo",
+                        "RollNo": "rollno",
+                        "in": "json",
+                        "example": "2015"
+                    }
+                               ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "successfully Inserted."
+                    }
+                }
+            },
+             "get": 
+               {
+                   "description": "To show the student details",
+                   "responses":
+                    {
+                       "200": 
+                       {
+                           "description": "Successfully fetched the data"
+                       }
+                    }
+               }
+               
+             
+        },
+        
+          "/manipulate/3":
+          {
+             "get": 
+             {
+                 "description": "To get the data by id",
+                 "responses":
+                  {
+                     "200": 
+                     {
+                         "description": "Successfully fetched the data"
+                     }
+                  }
+             },
+             "delete": 
+             {
+                 "description": "To delete the id",
+                 "responses":
+                  {
+                     "200": 
+                     {
+                         "description": "Successfully Deleted the data"
+                     }
+                  }
+             },
+             "put": 
+            {
+                "description": "Api of Update data",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Username",
+                        "id": "id",
+                        "in": "json",
+                        "example": "1"
+                    },
+                    {
+                        "type": "string",
+                        "description": "name",
+                        "name": "name",
+                        "in": "json",
+                        "example": "Yadwinder"
+                    },
+                    {
+                        "type": "string",
+                        "description": "class",
+                        "class": "class",
+                        "in": "json",
+                        "example": "10th"
+                    },
+                    {
+                        "type": "string",
+                        "description": "RollNo",
+                        "RollNo": "rollno",
+                        "in": "json",
+                        "example": "2015"
+                    }
+                               ],
+                "responses": 
+                {
+                    "200": 
+                    {
+                        "description": "successfully Updated."
+                    }
+                }
+            }
+             
+             
+         }
+         
+       
+        
+    }
+}
