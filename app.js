@@ -6,7 +6,6 @@ const swaggerDocument = require('./swagger.json');
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const routes = require('./routes/approutes');
-const sql = require('./db')
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());  
 
@@ -16,4 +15,4 @@ app.use('/manipulate', routes);
 
 
 module.exports = app;
-app.listen(port, () => { console.log("server starts..") });
+
